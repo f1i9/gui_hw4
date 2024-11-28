@@ -1,0 +1,77 @@
+<!-- 
+File: index.html
+GUI Assignment: Homework 4
+Content: This file contains the HTML structure for a web app that generates, displays, and manages multiplication tables 
+based on user input. The app includes interactive features such as:
+- **Input Fields**: For specifying the minimum and maximum values of rows and columns.
+- **Buttons**: For generating tables, clearing fields, saving tables as tabs, deleting all tables, listing tabs, and deleting selected tabs.
+- **Sliders**: Integrated jQuery UI sliders for adjusting input values dynamically.
+- **Tabs Section**: Allows saving and viewing multiple tables, with the ability to delete individual or selected tabs.
+
+This file links to external CSS for styling and jQuery UI for enhanced interactivity. It serves as the interface for the 
+JavaScript functionality defined in `index.js`.
+
+Author: Alireza Jahanban, UMass Lowell Computer Science  
+Email: Alireza_Jahanban@student.uml.edu  
+Copyright (c) 2024 by Alireza Jahanban. All rights reserved.  
+This code is free to use by anyone for business or educational purposes with credit to the author.  
+Last updated: November 2024.
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+</head>
+<body>
+
+    <div id="top">
+        <!-- <h1>Multiplication Table Generator</h1> -->
+        <div id="inputbox">
+            <input type="number" id="min-row" placeholder="Min Row" />
+            <input type="number" id="max-row" placeholder="Max Row" />
+            <input type="number" id="min-col" placeholder="Min Col" />
+            <input type="number" id="max-col" placeholder="Max Col" />
+            <button id="generate-button">Generate</button>
+            <button id="clear-button">Clear</button>
+            <button id="add-tab-btn">Save</button>
+            <button id="delete-button">Delete All</button>
+            <button id="list-button">List</button>
+            <button id="delete-selected-button">Delete List</button>
+
+            <div class="slider-container">
+                <div id="slider1" class="slider"></div>
+                <div id="slider2" class="slider"></div>
+                <div id="slider3" class="slider"></div>
+                <div id="slider4" class="slider"></div>
+            </div>            
+        </div>
+        <div class="table-container" id="topTableContainer"></div>
+    </div>
+
+    <div id="bottom">
+        <div id="tab-container" class="tab-container">
+            <!-- <div class="tab active" data-tab="tab1">Tab 1 <span class="close-btn">x</span></div> -->
+        </div>
+    
+        <div id="content-container">
+           <!-- <div id="tab1" class="content active">Content for Tab 1</div> -->
+        </div>
+    </div>
+
+    <div id="ttabs">
+        <ul></ul>
+        <div id="tab-1"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
